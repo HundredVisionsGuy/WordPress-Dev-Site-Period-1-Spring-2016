@@ -11,9 +11,23 @@
 }
 .page_item_has_children:hover>.children {
     height: 100%;
-    overflow: auto;
+    opacity: 1;
 }
 .children {
-    height: 1px;
-    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+    position: absolute;
+    width: 15em;
 }
+.children li {
+    background-color: #fff;
+    border: 1px solid #808080;
+    padding-left: 1em;
+}
+.children .children {
+    left: 15em;
+    top: 1em;
+}
+
+
