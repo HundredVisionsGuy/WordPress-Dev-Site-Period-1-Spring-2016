@@ -1,0 +1,19 @@
+.current_page_item a {
+    background-color: #336699;
+    color: white;
+}
+.page_item_has_children a {
+    display: block;
+}
+.page_item_has_children a:hover {
+    background-color: #f5f3f3;
+    text-decoration: none;
+}
+.page_item_has_children:hover>.children {
+    height: 100%;
+    overflow: auto;
+}
+.children {
+    height: 1px;
+    overflow: hidden;
+}
