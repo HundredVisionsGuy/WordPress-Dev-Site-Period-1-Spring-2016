@@ -136,6 +136,9 @@
 		</header>
 
 		<nav id="nav" role="navigation">
-			<?php wp_nav_menu( array('theme_location' => 'primary') ); ?>
+			<?php wp_nav_menu( array('theme_location' => 'primary', 
+                        'container' => 'ul', 
+                        'menu_class' => 'nav nav-pills'
+ ) ); ?>
 		</nav>
 
