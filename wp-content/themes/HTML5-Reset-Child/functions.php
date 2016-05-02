@@ -8,6 +8,10 @@ function theme_enqueue_styles() {
         get_stylesheet_directory_uri() . '/style.css',
         array( $parent_style )
     );
+    // Add navigation.css
+    wp_enqueue_style( 'navigation', 		
+		get_stylesheet_directory_uri() . '/css/navigation.css'
+	);
 	// Load Bootstrap CSS Files
 	wp_enqueue_style( 'bootstrap-min', 		
 		get_stylesheet_directory_uri() . '/css/bootstrap.min.css'
@@ -18,4 +22,5 @@ function theme_enqueue_styles() {
 	wp_enqueue_script( 'bootstrap.min', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', '3.0.0', true);
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
+
 ?>
