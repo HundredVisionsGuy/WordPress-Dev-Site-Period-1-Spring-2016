@@ -1,3 +1,13 @@
+/* Mobile First Design 
+    Mobile Portrait Layout: all changes in this section are for phones (mobile)
+    at portrait layout (most narrow devices)
+    */
+ul.nav-pills>li {
+    float: none;
+}
+ul.nav-pills>li+li {
+    margin-left: 0;
+}
 .current_page_item a {
     background-color: #336699;
     color: white;
@@ -10,24 +20,69 @@
     text-decoration: none;
 }
 .page_item_has_children:hover>.children {
-    height: 100%;
+    height: auto;
     opacity: 1;
 }
-.children {
+ul.children {
     opacity: 0;
-    -webkit-transition: opacity 1s;
-    transition: opacity 1s;
-    position: absolute;
-    width: 15em;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    height: 0;
 }
-.children li {
-    background-color: #fff;
-    border: 1px solid #808080;
+ul.children li {
+    background-color: #ddd;
     padding-left: 1em;
 }
-.children .children {
-    left: 15em;
-    top: 1em;
+ul.children a {
+    background-color: #ddd;
+    padding: .5em;
 }
-
-
+/* Responsive Menu */
+button.btn.btn-default.btn-lg.responsive-toggle {
+    height: auto;
+    opacity: 1;
+}
+ul.nav-pills.hidden {
+    height: 0;
+    opacity: 0;
+}
+ul.nav.nav-pills {
+	height: auto;
+	opacity: 1;
+}
+/* Tablet Landscape Position (greater than 860px) */
+@media (min-width: 861px) {
+    .children {
+        position: absolute;
+        width: 15em;
+        z-index: 10;
+    }
+    .children li {
+        border: 1px solid #808080;
+    }
+    .children .children {
+        bottom: -2em;
+        right: 15em;
+        z-index: 10;
+    }
+    /* Display navbar */
+	ul.nav.nav-pills,
+	#nav ul.nav.nav-pills.hidden {
+		height: auto;
+		opacity: 1;
+	}
+    /* Hide toggle button */
+	button.btn.btn-default.btn-lg.responsive-toggle {
+		height: 0;
+		opacity: 0;
+	}
+}
+/* Breakpoint for adding in horizontal navbar */
+@media (min-width: 927px) {
+    ul.nav-pills>li {
+        float:  left;
+    }
+    ul.nav-pills>li+li {
+        margin-left: 2px;
+    }
+}

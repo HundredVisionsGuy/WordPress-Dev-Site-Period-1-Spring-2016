@@ -11,8 +11,67 @@
  Tags:         bootstrap, multiple-columns, right-sidebar, responsive-layout
  Text Domain:  HTML5-Reset
 */
-
-.fontface {
-	font-family: Consolas, monospace;
+/* Mobile First Design 
+    Mobile Portrait Layout: all changes in this section are for phones (mobile)
+    at portrait layout (most narrow devices)
+    */
+/* Load our fonts */
+@font-face {
+    font-family: 'Aleo';
+    src: url('fonts/Aleo-Italic.otf');
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Aleo';
+    src: url('fonts/Aleo-Bold.otf');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'Aleo';
+  src: url('fonts/Aleo-BoldItalic.eot');
+  src: url('fonts/Aleo-BoldItalic.woff2') format('woff2'),
+       url('fonts/Aleo-BoldItalic.woff') format('woff'),
+       url('fonts/Aleo-BoldItalic.ttf') format('truetype'),
+       url('fonts/Aleo-BoldItalic.svg#Aleo-BoldItalic') format('svg'),
+       url('fonts/Aleo-BoldItalic.eot?#iefix') format('embedded-opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'montserratregular';
+    src: url('fonts/montserrat-regular.woff2') format('woff2'),
+         url('fonts/montserrat-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body.fontface {
+	font-family: 'montserratregular';
+    font-size: 220%;
+}
+#header h1 {
+    font-family: 'Aleo', sans-serif;
+    font-weight: 600;
+    font-style:  italic;
+}
+h2, h3, h4 {
+    font-family: 'Aleo', sans-serif;
+    font-weight: 700;
+    font-style:  normal;
 }
 
+/* End of Mobile Portrait Layout styles */
+
+/* Breakpoint */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
