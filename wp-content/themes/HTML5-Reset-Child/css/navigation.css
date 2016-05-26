@@ -19,12 +19,6 @@ ul.nav-pills>li+li {
     display: inline-block;
     width: 90%;
 }
-ul.children {
-    opacity: 0;
-    -webkit-transition: all 1s;
-    transition: all 1s;
-    height: 0;
-}
 ul.children li {
     background-color: #ddd;
     padding-left: 1em;
@@ -44,7 +38,8 @@ button.btn.btn-default.btn-sm.responsive-toggle {
     padding: 10px 15px;
     font-size: 85%;
 }
-ul.nav-pills.hidden {
+ul.nav-pills.hidden,
+ul.children.hidden {
     height: 0;
     opacity: 0;
 }
