@@ -15,13 +15,9 @@ ul.nav-pills>li+li {
 .page_item_has_children a {
     display: block;
 }
-.page_item_has_children a:hover {
-    background-color: #f5f3f3;
-    text-decoration: none;
-}
-.page_item_has_children:hover>.children {
-    height: auto;
-    opacity: 1;
+.page_item_has_children button+a {
+    display: inline-block;
+    width: 90%;
 }
 ul.children {
     opacity: 0;
@@ -41,6 +37,12 @@ ul.children a {
 button.btn.btn-default.btn-lg.responsive-toggle {
     height: auto;
     opacity: 1;
+}
+button.btn.btn-default.btn-sm.responsive-toggle {
+    display: inline-block;
+    width: 10%;
+    padding: 10px 15px;
+    font-size: 85%;
 }
 ul.nav-pills.hidden {
     height: 0;
@@ -76,6 +78,14 @@ ul.nav.nav-pills {
 		height: 0;
 		opacity: 0;
 	}
+    .page_item_has_children a:hover {
+        background-color: #f5f3f3;
+        text-decoration: none;
+    }
+    .page_item_has_children:hover>.children {
+        height: auto;
+        opacity: 1;
+    }
 }
 /* Breakpoint for adding in horizontal navbar */
 @media (min-width: 927px) {

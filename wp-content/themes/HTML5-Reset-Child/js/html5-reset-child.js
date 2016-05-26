@@ -14,7 +14,7 @@ $(document).ready(function() {
 		$( "ul.nav.nav-pills" ).toggleClass("hidden");
 	});
 	// Add a toggle button to nested listStyleType
-	$("#nav .page_item_has_children>a").append("<button type=\"button\" class=\"btn btn-default btn-sm responsive-toggle pull-right\"><span class=\"glyphicon glyphicon-chevron-up\" aria-hidden=\"true\"></span></button>");
+	$("#nav .page_item_has_children>a").before("<button type=\"button\" class=\"btn btn-default btn-sm responsive-toggle pull-right\"><span class=\"glyphicon glyphicon-chevron-up\" aria-hidden=\"true\"></span></button>");
 	$( window ).resize(function() {
 		if ( $( window ).width() >= 768 ) {
 			// remove the hidden class from the nav to unhide the nav
