@@ -1,6 +1,14 @@
 /* html5-reset-child.js */
 
 $(document).ready(function() {
+    // Hide or unhide menu when page loads based on window size
+    if ( $(window).width() >= 861 ) {
+        $( ".nav.nav-pills.hidden" ).removeClass("hidden");
+    }
+    else {
+        $( ".nav.nav-pills" ).addClass("hidden");
+    }
+    
     // Hide or Unhide menu when the responsive toggle is clicked
 	$( ".responsive-toggle" ).click(function() {
 		$( "ul.nav.nav-pills" ).toggleClass("hidden");
