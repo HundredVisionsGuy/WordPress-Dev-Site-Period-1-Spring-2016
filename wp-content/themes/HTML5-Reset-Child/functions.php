@@ -19,6 +19,7 @@ function theme_enqueue_styles() {
 	wp_enqueue_style( 'bootstrap-theme-min', 		
 		get_stylesheet_directory_uri() . '/css/bootstrap-theme.min.css'
 	);
+    
 	wp_enqueue_script( 'bootstrap.min', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', '3.0.0', true);
 	wp_enqueue_script( 'html5-reset-child', get_stylesheet_directory_uri() . '/js/html5-reset-child.js');
 }

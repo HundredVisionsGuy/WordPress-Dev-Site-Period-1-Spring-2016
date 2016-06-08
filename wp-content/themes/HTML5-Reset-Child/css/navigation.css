@@ -47,8 +47,29 @@ ul.nav.nav-pills {
 	height: auto;
 	opacity: 1;
 }
+@media (min-width: 785px) {
+    /* Hide menu toggle */
+    button.btn.btn-default.btn-lg.responsive-toggle {
+        height: 0;
+        opacity: 0;
+    }
+    /* Display navbar */
+	ul.nav.nav-pills {
+		height: auto;
+		opacity: 1;
+	}
+}
 /* Tablet Landscape Position (greater than 860px) */
 @media (min-width: 861px) {
+
+}
+/* Breakpoint for adding in horizontal navbar */
+@media (min-width: 927px) {
+    /* Hide nested toggles 
+    .nested-responsive-toggle {
+        height: 0;
+        opacity: 0;
+    }*/
     .children {
         position: absolute;
         width: 15em;
@@ -62,17 +83,7 @@ ul.nav.nav-pills {
         right: 15em;
         z-index: 10;
     }
-    /* Display navbar */
-	ul.nav.nav-pills,
-	#nav ul.nav.nav-pills.hidden {
-		height: auto;
-		opacity: 1;
-	}
-    /* Hide toggle button */
-	button.btn.btn-default.btn-lg.responsive-toggle {
-		height: 0;
-		opacity: 0;
-	}
+
     .page_item_has_children a:hover {
         background-color: #f5f3f3;
         text-decoration: none;
@@ -81,9 +92,6 @@ ul.nav.nav-pills {
         height: auto;
         opacity: 1;
     }
-}
-/* Breakpoint for adding in horizontal navbar */
-@media (min-width: 927px) {
     ul.nav-pills>li {
         float:  left;
     }
